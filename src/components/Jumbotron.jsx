@@ -42,10 +42,10 @@ class Jumbotron extends Component {
         {this.state.array[this.state.cont] ? (
           <Row className="p-5 bg-dark text-secondary gy-3 pt-0">
             <h2 className="display-1 mb-5">{this.state.array[this.state.cont][0].category}</h2>
-            {this.state.array[this.state.cont].map((x) => (
-              <Col md="2" xs="4">
-                <Card>
-                  <Card.Img variant="top" src={x.img} key={`book-${x.asin}`} />
+            {this.state.array[this.state.cont].map((x, index) => (
+              <Col md="2" xs="4" key={`book-${index}`}>
+                <Card style={{ overflow: "hidden" }}>
+                  <Card.Img variant="top" src={x.img} />
                 </Card>
               </Col>
             ))}
