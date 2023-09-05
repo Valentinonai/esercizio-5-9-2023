@@ -2,8 +2,8 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const TopBar = () => {
   return (
-    <Navbar expand="lg" className="bg-dark ">
-      <Container fluid="xl">
+    <Navbar expand="lg" style={{ backgroundColor: "black" }}>
+      <Container fluid="sm">
         <Navbar.Brand href="#home" className="text-white fs-3">
           Library-ReactBoostrap
         </Navbar.Brand>

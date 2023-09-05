@@ -4,8 +4,8 @@ const MyFooter = () => {
   return (
     <footer className="bg-dark" style={{ borderTop: "1px solid gray" }}>
       <Container fluid="md" className="bg-dark text-secondary py-4">
-        <Row className="justify-content-start">
-          <Col xs={3}>
+        <Row className="justify-content-center bg-dark align-items-start">
+          <Col xs={3} md={2}>
             <div className="d-flex flex-column align-items-start">
               <h3>Library</h3>
               <p style={{ fontSize: "10px", marginBottom: "5px" }}>React & Boostrap</p>
@@ -13,9 +13,9 @@ const MyFooter = () => {
               <p style={{ fontSize: "10px", marginBottom: "5px" }}>currently v1.0.0</p>
             </div>
           </Col>
-          <Col xs={3}>
+          <Col xs={3} md={2}>
             <div className="d-flex flex-column align-items-start">
-              <h4>Links</h4>
+              <h4 style={{ fontSize: "20px" }}>Links</h4>
               <div>
                 <a style={{ fontSize: "12px" }} href="#link">
                   Home
@@ -33,9 +33,9 @@ const MyFooter = () => {
               </div>
             </div>
           </Col>
-          <Col xs={3}>
+          <Col xs={3} md={2}>
             <div className="d-flex flex-column align-items-start">
-              <h4>Genere</h4>
+              <h4 style={{ fontSize: "20px" }}>Genere</h4>
               <div>
                 <a style={{ fontSize: "12px" }} href="#link">
                   Avventura
@@ -53,9 +53,9 @@ const MyFooter = () => {
               </div>
             </div>
           </Col>
-          <Col xs={3}>
+          <Col xs={3} md={2}>
             <div className="d-flex flex-column align-items-start">
-              <h4>Community</h4>
+              <h4 style={{ fontSize: "20px" }}>Community</h4>
               <div>
                 <a style={{ fontSize: "12px" }} href="#link">
                   Issues

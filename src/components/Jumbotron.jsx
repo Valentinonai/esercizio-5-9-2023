@@ -5,6 +5,7 @@ import History from "../data/books/history.json";
 import Horror from "../data/books/horror.json";
 import Romance from "../data/books/romance.json";
 import Scifi from "../data/books/scifi.json";
+import CardBook from "./CardBook";
 
 class Jumbotron extends Component {
   state = {
@@ -15,18 +16,17 @@ class Jumbotron extends Component {
     return (
       <>
         <div className="p-5 bg-dark text-secondary ">
-          <Container fluid="xs" className="border border-1 p-4 rounded">
+          <Container fluid="xs" className="border border-1 p-4 rounded" style={{ boxShadow: "0 0 2px 2px gray" }}>
             <h1 className="display-5 fw-bold text-white" style={{ textAlign: "start" }}>
               Online Library
             </h1>
             <p className="col-md-8 fs-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, quidem obcaecati! Quae libero facilis,
-              minus similique maxime vitae aliquid mollitia animi voluptas placeat sit atque possimus! Ratione
-              necessitatibus harum ipsam!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iure facilis hic ea quasi nesciunt fuga
+              vero, ab repellat placeat.
             </p>
             <div className="d-flex">
               <button
-                className="btn btn-outline-primary btn-lg"
+                className="btn btn-outline-light btn-lg"
                 type="button"
                 onClick={() => {
                   this.setState({ cont: this.state.cont + 1 }, () => {
@@ -34,22 +34,13 @@ class Jumbotron extends Component {
                   });
                 }}
               >
-                Show Books
+                Change Category
               </button>
             </div>
           </Container>
         </div>
         {this.state.array[this.state.cont] ? (
-          <Row className="p-5 bg-dark text-secondary gy-3 pt-0">
-            <h2 className="display-1 mb-5">{this.state.array[this.state.cont][0].category}</h2>
-            {this.state.array[this.state.cont].map((x, index) => (
-              <Col md="2" xs="4" key={`book-${index}`}>
-                <Card style={{ overflow: "hidden" }}>
-                  <Card.Img variant="top" src={x.img} />
-                </Card>
-              </Col>
-            ))}
-          </Row>
+          <CardBook array={this.state.array} cont={this.state.cont} />
         ) : (
           <h2 className="p-5 bg-dark text-secondary gy-3 pt-0 mb-0">Books</h2>
         )}
