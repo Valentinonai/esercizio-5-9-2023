@@ -1,5 +1,5 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import TopBar from "./components/topBar";
 import MyFooter from "./components/MyFooter";
 import Jumbotron from "./components/Jumbotron";
